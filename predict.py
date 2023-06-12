@@ -11,7 +11,7 @@ image_path = 'happy.jpg'
 image = cv2.imread(image_path, 0)  # Read the image in grayscale
 image = cv2.resize(image, (48, 48))  # Resize the image to match the input size used during training
 image = np.expand_dims(image, axis=0)  # Add a batch dimension
-
+#image = image.reshape(-1, 48, 48, 1).astype('float32')/255.0
 # Perform any additional preprocessing, if required
 
 # Make predictions on the image
